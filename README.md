@@ -7,7 +7,7 @@ The IRC spamming component to the /r/gamedev monitoring system.
 Add lita-gamedev-spam to your Lita instance's Gemfile:
 
 ``` ruby
-gem "lita-gamedev-spam", git: "https://github.com/r-gamedev/lita-gamedev-spam.git"
+gem "lita-gamedev-spam", git: "https://github.com/r-gamedev/lita-gamedev-spam"
 ```
 
 ## Configuration
