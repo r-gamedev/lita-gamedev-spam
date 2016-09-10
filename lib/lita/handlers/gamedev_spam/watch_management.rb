@@ -68,6 +68,7 @@ module Lita
 
       # Command for watching a topic ID
       def watch(response)
+        log.info response.inspect
         room_name = response.room.andand.name
         user_name = response.user.andand.name
         routing_key = response.match_data[1]
@@ -79,6 +80,7 @@ module Lita
 
       # Command for unwatching a topic ID
       def unwatch(response)
+        log.info response.inspect
         room_name = response.room.andand.name
         user_name = response.user.andand.name
         routing_key = response.match_data[1]
@@ -90,6 +92,7 @@ module Lita
 
       # Command for requestor-only watching a topic ID
       def list_watch(response)
+        log.info response.inspect
         room_name = response.room.andand.name
         user_name = response.user.andand.name
         response.reply "#{response.user.name}, list for '#{room_name || user_name}': "\
@@ -111,6 +114,7 @@ module Lita
 
       # Command for requestor-only watching a topic ID
       def unfollow(response)
+        log.info response.inspect
         user_name = response.user.andand.name
         routing_key = response.match_data[1]
         unsubscribe(nil, user_name, routing_key)
