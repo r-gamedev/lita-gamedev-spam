@@ -22,6 +22,8 @@ module Lita
       VALID_FOLLOW_ROUTING_KEYS_HELPTEXT =
         'invalid key. help: submission.(gamedev|*|#) or comment.gamedev.(id|*|#)'.freeze
 
+      route(/^watch$/, :see)
+
       route(/^watch\s+(.+)/, :watch,
             command: true, restrict_to: :admins,
             help: {
@@ -65,6 +67,10 @@ module Lita
             help: {
               'list follow' =>
                 'lists the current watches for the user' })
+
+      def see(response)
+        response.reply "*sees #{response.user.name}*"
+      end
 
       # Command for watching a topic ID
       def watch(response)
