@@ -1,19 +1,29 @@
 # lita-gamedev-spam
 
-TODO: Add a description of the plugin.
+The IRC spamming component to the /r/gamedev monitoring system.
 
 ## Installation
 
 Add lita-gamedev-spam to your Lita instance's Gemfile:
 
 ``` ruby
-gem "lita-gamedev-spam"
+gem "lita-gamedev-spam", git: "https://github.com/r-gamedev/lita-gamedev-spam.git"
 ```
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
+None.
 
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+```irc
+lita: list watch
+lita: list follow
+lita: watch submission.#
+lita: unwatch submission.#
+lita: follow submission.#
+lita: unfollow submission.#
+lita: follow submission.gamedev
+lita: follow comment.gamedev.*
+lita: unfollow submission.#
+```

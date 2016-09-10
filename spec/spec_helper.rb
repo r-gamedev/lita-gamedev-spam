@@ -1,3 +1,5 @@
+ENV['REDIS_URL'] = 'redis://0.0.0.0:32768'
+
 require 'lita-gamedev-spam'
 require 'lita/rspec'
 
