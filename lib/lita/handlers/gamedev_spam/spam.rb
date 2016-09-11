@@ -20,7 +20,7 @@ module Lita
       # config :rabbitmq_url, default: ENV['rabbitmq_url']
       @@temp_storage ||= ::Lemtzas::Common::Lita::TempStorage.new
 
-      @@conn = Bunny.new(hostname: ENV['rabbitmq_url'])
+      @@conn = Bunny.new(ENV['rabbitmq_url'])
       @@conn.start
       @@ch = @@conn.create_channel
       @@topic = @@ch.topic('reddit-monitor-live')
