@@ -37,7 +37,7 @@ module Lemtzas
                         :num_reports
 
           def shortlink
-            "http://redd.it/#{id}"
+            "https://redd.it/#{id}"
           end
 
           def shorttext(length = 40, strip_newlines = true)

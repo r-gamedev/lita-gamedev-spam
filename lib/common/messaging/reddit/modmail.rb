@@ -18,7 +18,7 @@ module Lemtzas
                         :first_message_name
 
           def shortlink
-            "http://reddit.com/message/messages/#{id}"
+            "https://reddit.com/message/messages/#{id}"
           end
 
           def shorttext(length = 40, strip_newlines = true)

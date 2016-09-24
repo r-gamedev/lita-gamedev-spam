@@ -41,7 +41,7 @@ module Lemtzas
 
           def shortlink
             link_tag = link_id.split('_')[1]
-            "http://reddit.com/r/#{subreddit}/comments/#{link_tag}/-/#{id}"
+            "https://reddit.com/r/#{subreddit}/comments/#{link_tag}/-/#{id}"
           end
 
           def shorttext(length = 40, strip_newlines = true)
