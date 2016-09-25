@@ -62,7 +62,7 @@ module Lemtzas
             submission.author = data.author
             submission.title = html_entities.decode(data.title)
             submission.selftext = html_entities.decode(data.selftext)
-            submission.subreddit = data.subreddit
+            submission.subreddit = data.subreddit.downcase
             submission.media = data.media
             submission.link_flair_text = data.link_flair_text
             submission.link_flair_css_class = data.link_flair_css_class

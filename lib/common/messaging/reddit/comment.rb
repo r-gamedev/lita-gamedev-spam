@@ -84,7 +84,7 @@ module Lemtzas
             comment.author_flair_css_class = data.author_flair_css_class
             comment.author_flair_text = data.author_flair_text
             comment.quarantine = data.quarantine
-            comment.subreddit = data.subreddit
+            comment.subreddit = data.subreddit.downcase
             comment.score_hidden = data.score_hidden
             comment.name = data.name
             comment.created_utc = data.created_utc

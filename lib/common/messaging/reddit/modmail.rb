@@ -41,7 +41,7 @@ module Lemtzas
             modmail.id = data.id
             modmail.author = data.author
             modmail.created_utc = data.created_utc
-            modmail.subreddit = data.subreddit
+            modmail.subreddit = data.subreddit.downcase
             modmail.subject = html_entities.decode(data.subject)
             modmail.distinguished = data.distinguished
             modmail.first_message_name = data.first_message_name
