@@ -44,17 +44,17 @@ module Lita
             command: true,
             help: {
               'follow comment.gamedev' =>
-                'subscribes the channel to comments from /r/gamedev',
+                'subscribes you (via PMs) to comments from /r/gamedev',
               'follow comment.#' =>
-                'subscribes the channel to all comments',
+                'subscribes you (via PMs) to all comments',
               'follow submission.gamedev' =>
-                'subscribes the channel to submissions from /r/gamedev' })
+                'subscribes you (via PMs) to submissions from /r/gamedev' })
 
       route(/^unfollow\s+(.+)/, :unfollow,
             command: true,
             help: {
               'unfollow comment.gamedev' =>
-                'unsubscribes the channel to comments from /r/gamedev' })
+                'unsubscribes you (via PMs) to comments from /r/gamedev' })
 
       route(/^list watch$/, :list_watch,
             command: true,

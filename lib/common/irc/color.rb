@@ -28,6 +28,7 @@ module Lemtzas
         BOLD       = "\x02".freeze # \u0002
         UNDERLINE  = "\x1f".freeze # \u001F
         INVERSE    = "\x16".freeze # \u0016
+        ITALIC     = "\x1d".freeze # \u001D
         CLEAR      = "\x0f".freeze # \u000F
 
         COLOR_TABLE = {
@@ -70,7 +71,7 @@ module Lemtzas
 
           def italic
             ircolor = Color.new
-            ircolor.inverse
+            ircolor.italic
             ircolor
           end
 
@@ -121,7 +122,7 @@ module Lemtzas
         end
 
         def italic
-          add_code_l INVERSE
+          add_code_l ITALIC
         end
 
         def clear
