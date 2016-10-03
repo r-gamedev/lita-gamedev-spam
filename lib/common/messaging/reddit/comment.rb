@@ -46,7 +46,7 @@ module Lemtzas
 
           def shorttext(length = 40, strip_newlines = true)
             text = body
-            text = text.gsub(/\r|\n/, '') if strip_newlines
+            text = text.gsub(/\r|\n/, ' ') if strip_newlines
             short = text[0..length]
             short += ' [...]' if text.length > short.length
             short
